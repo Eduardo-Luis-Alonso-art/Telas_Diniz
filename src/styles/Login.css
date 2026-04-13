@@ -1,0 +1,209 @@
+.login-container {
+  display: flex;
+  min-height: 100vh;
+  font-family: 'Rubik', sans-serif;
+}
+
+/* ========================= */
+/* LADO ESQUERDO (AZUL) */
+/* ========================= */
+
+.login-left {
+  flex: 0.8;
+  background: linear-gradient(135deg, #13172D, #114166);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+
+  /* Curva moderna */
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+
+  position: relative;
+  z-index: 1;
+}
+
+.branding {
+  max-width: 420px;
+}
+
+/* TÍTULO */
+.branding h1 {
+  font-size: 3.5rem;
+  color: #218DE1;
+  margin-bottom: 20px;
+}
+
+/* SUBTÍTULO */
+.subtitle {
+  font-size: 1.15rem;
+  margin-bottom: 40px;
+  color: #DDE2E8;
+  line-height: 1.5;
+}
+
+/* FEATURES */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ITEM COM ANIMAÇÃO */
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 1.05rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.feature-item img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* deixa branco */
+  opacity: 0.9;
+}
+
+/* delay diferente para cada item */
+.feature-item:nth-child(1) {
+  animation-delay: 1s;
+}
+.feature-item:nth-child(2) {
+  animation-delay: 1s;
+}
+.feature-item:nth-child(3) {
+  animation-delay: 1s;
+}
+
+/* ========================= */
+/* LADO DIREITO */
+/* ========================= */
+
+.login-right {
+  flex: 1.2;
+  background-color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================= */
+/* CARD LOGIN */
+/* ========================= */
+
+.login-card {
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  width: 380px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transform: translateX(-30px);
+}
+
+/* TÍTULO */
+.login-card h2 {
+  font-size: 1.8rem;
+  color: #13172D;
+  margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.login-description {
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+/* ========================= */
+/* BOTÃO GOOGLE */
+/* ========================= */
+
+.google-btn {
+  background-color: #218DE1;
+  color: white;
+  border: none;
+  padding: 14px;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  transition: all 0.3s ease;
+
+  /* 👇 chama atenção sem exagero */
+  animation: pulse 2s infinite;
+}
+
+/* hover mais forte */
+.google-btn:hover {
+  background-color: #114166;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(33, 141, 225, 0.4);
+
+  animation: none; /* para a animação no hover */
+}
+
+.google-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ÍCONE */
+.google-icon {
+  background: white;
+  color: #218DE1;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+/* FOOTER */
+.login-footer {
+  margin-top: 20px;
+  font-size: 0.85rem;
+  color: #999;
+}
+
+/* ========================= */
+/* ANIMAÇÃO */
+/* ========================= */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 141, 225, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 141, 225, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 141, 225, 0);
+  }
+}

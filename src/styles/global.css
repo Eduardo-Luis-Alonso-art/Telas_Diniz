@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rubik', system-ui, sans-serif;
+  background-color: #f8f9fa;
+  color: #292929;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cores do projeto LexMetrics */
+:root {
+  --primary-dark: #13172D;
+  --primary: #114166;
+  --primary-light: #218DE1;
+  --white: #FFFFFF;
+  --light-bg: #DDE2E8;
+  --gray-light: #9A9695;
+  --gray-dark: #292929;
+  --text-dark: #474847;
+}
+
+.main-container {
+  display: flex;
+  margin-left: 260px;
+  min-height: calc(100vh - 70px);
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+  background-color: #f8f9fa;
+}

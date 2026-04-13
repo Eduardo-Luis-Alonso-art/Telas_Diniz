@@ -1,0 +1,149 @@
+.header {
+  background-color: var(--primary-dark);
+  color: var(--white);
+  padding: 0 2rem;
+  height: 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* LEFT */
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.header-title h1 {
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+.office-name {
+  font-size: 0.75rem;
+  color: var(--gray-light);
+}
+
+/* RIGHT */
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: bold;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: var(--gray-light);
+}
+
+/* BOTÃO */
+
+.logout-btn {
+  background: linear-gradient(135deg, #114166, #218DE1);
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+
+  transition: all 0.25s ease;
+}
+
+/* HOVER (flutuar + brilho leve) */
+.logout-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(33, 141, 225, 0.4);
+}
+
+/* CLIQUE (efeito pressionado) */
+.logout-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* EFEITO DE BRILHO (shimmer) */
+.logout-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+}
+
+/* animação no hover */
+.logout-btn:hover::after {
+  animation: shine 0.7s forwards;
+}
+
+/* keyframe do brilho */
+@keyframes shine {
+  100% {
+    left: 130%;
+  }
+}
