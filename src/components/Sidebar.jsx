@@ -1,5 +1,6 @@
 import "../styles/Sidebar.css";
 import chartIcon from "../assets/icons/SideBar/chart.svg";
+import kanbanIcon from "../assets/icons/SideBar/kanban.svg";
 import bellIcon from "../assets/icons/SideBar/bell.svg";
 import clockIcon from "../assets/icons/SideBar/clock.svg";
 import fileIcon from "../assets/icons/SideBar/file.svg";
@@ -16,6 +17,14 @@ const Sidebar = ({ setPage, page }) => {
         >
           <img src={chartIcon} alt="Dashboard" />
           <span>Dashboard</span>
+        </div>
+
+        <div
+          className={`nav-item ${page === "kanban" ? "active" : ""}`}
+          onClick={() => setPage("kanban")}
+        >
+          <img src={kanbanIcon} alt="Kanban" />
+          <span>Kanban de Tarefas</span>
         </div>
 
         <div

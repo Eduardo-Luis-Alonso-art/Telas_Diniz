@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
+import KanbanTarefas from "./pages/KanbanTarefas";
 import Alertas from "./pages/Alertas";
 import ProcessosParados from "./pages/ProcessosParados";
 import Relatorios from "./pages/Relatorios";
@@ -29,6 +30,8 @@ function App() {
     switch (page) {
       case "dashboard":
         return <Dashboard />;
+      case "kanban":
+        return <KanbanTarefas />;
       case "alertas":
         return <Alertas />;
       case "processos":
